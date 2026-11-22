@@ -550,7 +550,7 @@ function pickDesign(n){
   if(location.hash.slice(1)!==n)history.replaceState(null,'',n?'#'+n:location.pathname+location.search);
 }
 document.getElementById('designBtns').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;
-  pickDesign(b.dataset.d);build();applyVis();updateSun();if(D.design)setView('design');});
+  pickDesign(b.dataset.d);build();applyVis();updateSun();});
 
 // driveway
 const uE=(()=>{const d=[SE[0]-NE[0],SE[1]-NE[1]],L=Math.hypot(...d);return [d[0]/L,d[1]/L];})();
