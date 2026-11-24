@@ -553,7 +553,7 @@ function designStats(){
 }
 
 function pickDesign(n){
-  n=D.designs[n]?n:'';D.design=n?D.designs[n]:null;G.z=D.gridZ[n];el.lExist.checked=!n;el.dOn.checked=!!n;el.lRed.checked=!!n;
+  n=D.designs[n]?n:'';D.design=n?D.designs[n]:null;G.z=D.gridZ[n];el.lExist.checked=!n;el.dOn.checked=!!n;el.lRed.checked=!!n;el.lTree.checked=!n;
   document.querySelectorAll('#designBtns button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.d===n)));
   document.getElementById('designPanel').hidden=!n;
   if(n){document.getElementById('dTitle').textContent=D.design.meta.title||n;document.getElementById('dSummary').textContent=D.design.meta.summary||'';}
